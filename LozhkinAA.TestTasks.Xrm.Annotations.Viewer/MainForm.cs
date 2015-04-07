@@ -44,7 +44,7 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations.Viewer
                 AnnotationDescription[] data = null;
                 await Task.Run(() => { data = _viewService.All().ToArray(); });
                 dgwCommits.DataSource = data;
-                statusLabel.Text = "To reload annotations press \"Update button\"";
+                statusLabel.Text = "To reload annotations press \"Update\" button";
             }
             catch (Exception ex)
             {
