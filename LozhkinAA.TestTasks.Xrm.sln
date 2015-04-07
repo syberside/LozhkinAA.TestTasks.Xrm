@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LozhkinAA.TestTasks.Xrm.Annotations", "LozhkinAA.TestTasks.Xrm.Annotations\LozhkinAA.TestTasks.Xrm.Annotations.csproj", "{97B20C2A-4E0A-424B-93EC-A972B969BDCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LozhkinAA.TestTasks.Xrm.Annotations.Analyzer", "LozhkinAA.TestTasks.Xrm.Annotations.Analyzer\LozhkinAA.TestTasks.Xrm.Annotations.Analyzer.csproj", "{ADC72BB8-BE54-4DB1-8429-451932362C5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D21E0905-A92C-45B7-9630-9E68DB725241}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{717AEB88-9348-4E85-BBFB-8A1F7D4B9368}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LozhkinAA.TestTasks.Xrm.Annotations.UnitTests", "LozhkinAA.TestTasks.Xrm.Annotations.UnitTests\LozhkinAA.TestTasks.Xrm.Annotations.UnitTests.csproj", "{41E7F66C-1D0E-4B8B-8B7C-15B22EB64009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LozhkinAA.TestTasks.Xrm.Annotations.Viewer", "LozhkinAA.TestTasks.Xrm.Annotations.Viewer\LozhkinAA.TestTasks.Xrm.Annotations.Viewer.csproj", "{7A0CAFD1-37A9-4A48-AC4A-5EE3EED44E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LozhkinAA.TestTasks.Xrm.Annotations.DataAccess", "LozhkinAA.TestTasks.Xrm.Annotations.DataAccess\LozhkinAA.TestTasks.Xrm.Annotations.DataAccess.csproj", "{B64C6750-D262-45C5-90A6-D68D9F7E6469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LozhkinAA.TestTasks.Xrm.Annotations.DataAccess.EntityFramework", "LozhkinAA.TestTasks.Xrm.Annotations.DataAccess.EntityFramework\LozhkinAA.TestTasks.Xrm.Annotations.DataAccess.EntityFramework.csproj", "{BBD2B7B2-4073-41FC-90D3-EF83CA357595}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97B20C2A-4E0A-424B-93EC-A972B969BDCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B20C2A-4E0A-424B-93EC-A972B969BDCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B20C2A-4E0A-424B-93EC-A972B969BDCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B20C2A-4E0A-424B-93EC-A972B969BDCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC72BB8-BE54-4DB1-8429-451932362C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC72BB8-BE54-4DB1-8429-451932362C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC72BB8-BE54-4DB1-8429-451932362C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC72BB8-BE54-4DB1-8429-451932362C5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E7F66C-1D0E-4B8B-8B7C-15B22EB64009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E7F66C-1D0E-4B8B-8B7C-15B22EB64009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E7F66C-1D0E-4B8B-8B7C-15B22EB64009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E7F66C-1D0E-4B8B-8B7C-15B22EB64009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A0CAFD1-37A9-4A48-AC4A-5EE3EED44E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0CAFD1-37A9-4A48-AC4A-5EE3EED44E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0CAFD1-37A9-4A48-AC4A-5EE3EED44E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0CAFD1-37A9-4A48-AC4A-5EE3EED44E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64C6750-D262-45C5-90A6-D68D9F7E6469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64C6750-D262-45C5-90A6-D68D9F7E6469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64C6750-D262-45C5-90A6-D68D9F7E6469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64C6750-D262-45C5-90A6-D68D9F7E6469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBD2B7B2-4073-41FC-90D3-EF83CA357595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBD2B7B2-4073-41FC-90D3-EF83CA357595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBD2B7B2-4073-41FC-90D3-EF83CA357595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBD2B7B2-4073-41FC-90D3-EF83CA357595}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{717AEB88-9348-4E85-BBFB-8A1F7D4B9368} = {D21E0905-A92C-45B7-9630-9E68DB725241}
+		{41E7F66C-1D0E-4B8B-8B7C-15B22EB64009} = {717AEB88-9348-4E85-BBFB-8A1F7D4B9368}
+	EndGlobalSection
+EndGlobal
