@@ -77,6 +77,36 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations.UnitTests
         }
 
         [Test]
+        public void BuildFor_OnNotNullAssembly_ProcessPublicMethods()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var info = DefaultAnnotationInfoProvider.ExtractFrom(assembly);
+            Assert.NotNull(info);
+            var methodInfo = info.MethodAnnotations.FirstOrDefault(a => a.ReflectedItem == typeof(ClassWithAnnotation).GetMethod("NonStaticMethod"));
+            Assert.NotNull(methodInfo);
+        }
+
+        [Test]
+        public void BuildFor_OnNotNullAssembly_ProcessPrivateMethods()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var info = DefaultAnnotationInfoProvider.ExtractFrom(assembly);
+            Assert.NotNull(info);
+            var methodInfo = info.MethodAnnotations.FirstOrDefault(a => a.ReflectedItem == typeof(ClassWithAnnotation).GetMethod("PrivateMethod"));
+            Assert.NotNull(methodInfo);
+        }
+
+        [Test]
+        public void BuildFor_OnNotNullAssembly_ProcessPublicStaticMethods()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var info = DefaultAnnotationInfoProvider.ExtractFrom(assembly);
+            Assert.NotNull(info);
+            var methodInfo = info.MethodAnnotations.FirstOrDefault(a => a.ReflectedItem == typeof(ClassWithAnnotation).GetMethod("PublicStaticMethod"));
+            Assert.NotNull(methodInfo);
+        }
+
+        [Test]
         public void BuildFor_OnNullAssembly_Throws()
         {
             Assert.Catch<ArgumentNullException>(() => DefaultAnnotationInfoProvider.ExtractFrom((Assembly) null));

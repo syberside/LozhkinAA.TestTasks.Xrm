@@ -7,7 +7,7 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations
     ///     Items marked with this attribute are used by Attributes Analyzer.
     ///     After annotations are stored by Analyzer they can be safely removed.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Assembly | AttributeTargets.Class | AttributeTargets.Method, Inherited = false, AllowMultiple = true)]
     public sealed class AnnotationAttribute : Attribute
     {
         /// <summary>

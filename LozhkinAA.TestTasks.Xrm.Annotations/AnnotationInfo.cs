@@ -11,8 +11,9 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations
     {
         private readonly AssemblyAnnotationInfo _assemblyAnnotationInfo;
         private readonly TypeAnnotationInfo[] _typeAnnotationInfos;
+        private readonly MethodAnnotationInfo[] _methodAnnotations;
 
-        public AnnotationInfo(AssemblyAnnotationInfo assemblyAnnotation, IEnumerable<TypeAnnotationInfo> typeAnnotations)
+        public AnnotationInfo(AssemblyAnnotationInfo assemblyAnnotation, IEnumerable<TypeAnnotationInfo> typeAnnotations,IEnumerable<MethodAnnotationInfo> methodAnnotations)
         {
             if (assemblyAnnotation == null)
             {
@@ -22,8 +23,13 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations
             {
                 throw new ArgumentNullException("typeAnnotations");
             }
+            if (methodAnnotations == null)
+            {
+                throw new ArgumentNullException("methodAnnotations");
+            }
             _assemblyAnnotationInfo = assemblyAnnotation;
             _typeAnnotationInfos = typeAnnotations.ToArray();
+            _methodAnnotations = methodAnnotations.ToArray();
         }
 
         /// <summary>
@@ -40,6 +46,11 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations
         public IEnumerable<TypeAnnotationInfo> TypeAnnotations
         {
             get { return _typeAnnotationInfos.AsEnumerable(); }
+        }
+
+        public IEnumerable<MethodAnnotationInfo> MethodAnnotations
+        {
+            get { return _methodAnnotations.AsEnumerable(); }
         }
     }
 }

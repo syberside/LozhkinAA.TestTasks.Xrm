@@ -20,7 +20,8 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations.Analyzer
         private const int WRONG_COMMAND_LINE_ARGUMENTS = 2;
 
 
-        private static void Main(string[] args)
+        [Annotation("Main method other commit", "Method annotating support added")]
+        public static void Main(string[] args)
         {
             Console.WriteLine("Assembly Annotations Analizer by Alexander Lozhkin");
             try
@@ -75,6 +76,7 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations.Analyzer
             {
                 throw new ArgumentNullException("filename");
             }
+            Console.WriteLine("Processing file: {0}",filename);
             //translate filename to full path
             var fileInfo = new FileInfo(filename);
             //extracts info

@@ -38,11 +38,18 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations.Services
             var assemblyAnnotations = assembly.GetCustomAttributes<AnnotationAttribute>();
             var assemblyInfo = new AssemblyAnnotationInfo(assembly, assemblyAnnotations);
             //load type-level annotations
-            var typeInfos = from type in assembly.GetTypes()
+            var types = assembly.GetTypes();
+            var typeInfos = from type in types
                 let attrs = type.GetCustomAttributes<AnnotationAttribute>()
                 where attrs.Any()
                 select new TypeAnnotationInfo(type, attrs);
-            return new AnnotationInfo(assemblyInfo, typeInfos);
+            //load method-level annotations
+            var methodInfos = from type in types
+                from method in type.GetMethods()
+                let attrs = method.GetCustomAttributes<AnnotationAttribute>()
+                where attrs.Any()
+                select new MethodAnnotationInfo(method, attrs);
+            return new AnnotationInfo(assemblyInfo, typeInfos,methodInfos);
         }
     }
 }

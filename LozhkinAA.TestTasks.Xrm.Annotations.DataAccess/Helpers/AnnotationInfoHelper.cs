@@ -62,6 +62,24 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations.DataAccess.Helpers
                     };
                 }
             }
+            //convert method-level annotations
+            foreach (var methodAnnotation in info.MethodAnnotations)
+            {
+                var methodName = methodAnnotation.ReflectedItem.DeclaringType.FullName+" -> "+methodAnnotation.ReflectedItem.ToString();
+                foreach( var annotation in methodAnnotation.Annotations )
+                {
+                    yield return new AnnotationDescription()
+                    {
+                        Assembly = assemblyFullName,
+                        Author = username,
+                        Comment = annotation.Comment,
+                        Id = annotation.Id,
+                        MemberName = methodName,
+                        //Assumes that "commit time" is same as "code change time"
+                        Time = DateTime.Now
+                    };
+                }
+            }
         }
     }
 }

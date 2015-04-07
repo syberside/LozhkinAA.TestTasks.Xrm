@@ -38,6 +38,7 @@
     <Compile Include="AnnotationInfo.cs" />
     <Compile Include="AnnotationItemInfo.cs" />
     <Compile Include="AssemblyAnnotationInfo.cs" />
+    <Compile Include="MethodAnnotationInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Abstract\IAnnotationInfoProvider.cs" />
     <Compile Include="Services\DefaultAnnotationInfoProvider.cs" />

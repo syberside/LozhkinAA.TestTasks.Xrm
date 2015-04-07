@@ -10,6 +10,23 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations.UnitTests
     public class ClassWithAnnotation
     {
 
+        [Annotation("PublicStaticMethod Annotation", "comment")]
+        public static void PublicStaticMethod()
+        {
+
+        }
+
+        [Annotation("NonSaticMethod Annotation", "comment")]
+        public void NonStaticMethod()
+        {
+            
+        }
+
+        [Annotation("PrivateMethod Annotation", "comment")]
+        public void PrivateMethod()
+        {
+
+        }
     }
 
     [Annotation("annotation2", "comment2")]
