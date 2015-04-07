@@ -32,7 +32,7 @@ namespace LozhkinAA.TestTasks.Xrm.Annotations.Viewer
             //constructor injection
             _viewService = viewService;
             InitializeComponent();
-            statusLabel.Text = "To load annotations press \"Update button\"";
+            statusLabel.Text = "To load annotations press \"Update\" button";
         }
 
         private async void bUpdate_Click(object sender, EventArgs e)
